@@ -41,7 +41,9 @@ export default{
     }
   },
   created() {
-    
+    if(this.$route.path !== '/'){
+      this.$router.replace('/')
+    }
   },
   methods: {
     changepage (text) {

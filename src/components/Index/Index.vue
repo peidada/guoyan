@@ -9,7 +9,7 @@
       <!-- <div class="swiper-pagination"></div> -->
     </div>
       <a name="open"></a>
-      <div class="developbg">
+      <div class="developbg" :style="swiperHeight">
           <div class="developitem" :style="note1">
             <div class="iteminfo">
               <img class="itemicon" src="@/assets/td_10.png" alt="">
@@ -79,8 +79,8 @@
             </div></div>
       </div>
       <a name="yewu"></a>
-      <div class="businessbg" :style="busine">
-        <div class="businesswrap">
+      <div class="businessbg" :style="swiperHeight">
+        <div class="businesswrap" :style="busine">
             <ul class="businessitem1 listtem1">
               <li>01 意向洽谈</li>
               <li>02 需求分析</li>
@@ -91,7 +91,7 @@
         <div class="businessitem2">
             <img src="@/assets/bp_03.png" alt="" mode="widthFix">
         </div>
-         <ul class="businessitem1">
+         <ul class="businessitem1 businessitem111">
              <li>06 原型/技术</li>
              <li>07 程序开发</li>
              <li>08 产品测试</li>
@@ -101,7 +101,7 @@
         </div>
       </div>
       <a name="anli"></a>
-      <div class="success">
+      <div class="success" :style="swiperHeight">
         <div class="success-top">
             <div class="success-1"><span>國</span><span>研</span></div>
             <div class="success-2"><span>一家</span> <span>设计创新 ——’</span></div>
@@ -124,7 +124,7 @@
       <div>
         <div class="pop-1">营销咨询专家</div>
         <div class="pop-2">专家咨询(大咖一对一落地指导，手把手带您超近道)</div>
-        <div class="pop-middle">
+        <!-- <div class="pop-middle">
             <div v-for="(item,index) in popData" :key="index" @click="middleClick(index, item)">
                 <span class="spanClass" :class="currentIndex == index ? 'activeClass' : ''">{{item.name}}</span>
             </div>
@@ -136,9 +136,117 @@
                     <div class="position1">{{nameLook}}</div>
                     <div class="position2">{{desc}}</div>
                 </div>
-                <!-- <div class="xiangqi">了解详情 >></div> -->
+                <div class="xiangqi">了解详情 >></div>
             </div>
+        </div> -->
+
+
+        <div class="zixun-1">
+          <div class="zixun-1-1">
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_03.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">荆建林</div>
+                <div class="zixun-111-2-2">现任清华大学经管学院课程教授、中国石化集团首席教育专家、中国战略研究会特约研究员、并担任该会企业经营与战略部主任。</div>
+              </div>
+            </div>
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_05.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">阎旭临</div>
+                <div class="zixun-111-2-2">国内著名品牌专家；特色小镇和田园综合体产业规划专家；莫高丝路全球文旅首席品牌专家；广东江门市特聘文化专家。美国加州大学博士后中国区品牌课主讲教授。</div>
+              </div>
+            </div>
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_07.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">路长全</div>
+                <div class="zixun-111-2-2">当代最具有价值的是实战营销专家；中国一系列营销案列的策划人和操作者,其所著《切割》《软战争》《营销纲领》等成为当代中国营销指南针式的著作。</div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="zixun-1" style="margin-top: -1.5%;">
+          <div class="zixun-1-1">
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_12.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">万 钧</div>
+                <div class="zixun-111-2-2">现受聘中国企业联合会、河北省政府高级企业培训师、南京市、青岛市政府创业辅导专家。31年多行业经营管理经验，多家机关机构及企业顾问专家。</div>
+              </div>
+            </div>
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_13.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">曹建明</div>
+                <div class="zixun-111-2-2">八年的华为技术有限公司营销、营销管理、培训工作经验，国内知名的华为专家营销管理专家，绩效管理专家。</div>
+              </div>
+            </div>
+            <div class="zixun-111">
+              <div class="zixun-111-1"><img src="@/assets/teacher_14.png" alt=""></div>
+              <div class="zixun-111-2">
+                <div class="zixun-111-2-1">周 炜</div>
+                <div class="zixun-111-2-2">美国AACTP国际注册培训师、工商管理硕士、实战型职业经理人、资深管理技能训练专家，现任多家企业管理顾问。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="zixun-a">
+          <div class="zixun-a-1">
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_03.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">荆建林</div>
+                <div class="zixun-aaa-2-2">现任清华大学经管学院课程教授、中国石化集团首席教育专家、中国战略研究会特约研究员、并担任该会企业经营与战略部主任。</div>
+              </div>
+            </div>
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_05.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">阎旭临</div>
+                <div class="zixun-aaa-2-2">国内著名品牌专家；特色小镇和田园综合体产业规划专家；莫高丝路全球文旅首席品牌专家；广东江门市特聘文化专家。美国加州大学博士后中国区品牌课主讲教授。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zixun-a" style="margin-top: -1.5%;">
+          <div class="zixun-a-1">
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_07.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">路长全</div>
+                <div class="zixun-aaa-2-2">当代最具有价值的是实战营销专家；中国一系列营销案列的策划人和操作者,其所著《切割》《软战争》《营销纲领》等成为当代中国营销指南针式的著作。</div>
+              </div>
+            </div>
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_12.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">万 钧</div>
+                <div class="zixun-aaa-2-2">现受聘中国企业联合会、河北省政府高级企业培训师、南京市、青岛市政府创业辅导专家。31年多行业经营管理经验，多家机关机构及企业顾问专家。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zixun-a" style="margin-top: -1.5%;">
+          <div class="zixun-a-1">
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_13.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">曹建明</div>
+                <div class="zixun-aaa-2-2">八年的华为技术有限公司营销、营销管理、培训工作经验，国内知名的华为专家营销管理专家，绩效管理专家。</div>
+              </div>
+            </div>
+            <div class="zixun-aaa">
+              <div class="zixun-aaa-1"><img src="@/assets/teacher_14.png" alt=""></div>
+              <div class="zixun-aaa-2">
+                <div class="zixun-aaa-2-1">周 炜</div>
+                <div class="zixun-aaa-2-2">美国AACTP国际注册培训师、工商管理硕士、实战型职业经理人、资深管理技能训练专家，现任多家企业管理顾问。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
 
     <a name="peixun"></a>
@@ -176,7 +284,7 @@
               <div class="contactinfo contactcenter">
                 <img src="@/assets/bottom_07.png" alt="">
                 <div>扫码添加客服微信</div>
-                <p>copyright © 2018 版权所有 | 京ICP备16041114号</p>
+                <p>copyright © 2018 版权所有 | 京ICP备19031808号-1</p>
               </div>
               <div class="contactinfo contactadd">
                 <h1>010-62750413</h1>
@@ -406,6 +514,7 @@ export default {
   },
   watch: {
     screenWidth(newVal,oldVal){
+      console.log(newVal);
       this.swiperHeight = 'height:' + parseInt(newVal * 0.49) + 'px';
     }
   }
@@ -428,9 +537,92 @@ export default {
   display: inline-block;
 }
 
+@media (max-width: 1800px) {
+  .success{
+    padding-top: 1rem !important;
+  }
+  .zixun-1{
+    /* transform: scale(.9); */
+    height: 18.5rem !important;
+  }
+}
+
 @media (max-width: 1600px){
   .businesswrap{
-    padding-top: 10%;
+    padding-top: 6%;
+  }
+  .iteminfo{
+    transform: scale(.9);
+    top: 10% !important;
+  }
+  .businessitem1 li {
+    margin-top: 5% !important;
+  }
+  .success-top{
+    transform: scale(.9);
+  }
+  .success-middle{
+    margin-top: 0rem !important;
+  }
+  .success-bottom{
+    margin-top: 7rem !important;
+  }
+  .bottom-kuang{
+    height: 100% !important;
+  }
+  .success{
+    padding-top: 2rem !important;
+  }
+  .zixun-1{
+    height: 17.5rem !important;
+  }
+}
+
+@media (max-width: 1450px){
+  .success-bottom{
+    transform: scale(.9);
+    margin-top: 5rem !important;
+  }
+  .success{
+    padding-top: 1rem !important;
+  }
+  .zixun-1{
+    display: none !important;
+  }
+  .zixun-a{
+    display: block !important;
+    height: 16rem !important;
+    width: 70% !important;
+  }
+  .cust-1{
+    margin-top: 60rem !important;
+  }
+  .contactimg{
+    transform: scale(.9);
+  }
+}
+
+@media (max-width: 1300px){
+  .iteminfo{
+    transform: scale(.8);
+    top: 6% !important;
+  }
+  .businessitem1 li {
+    margin-top: 3% !important;
+  }
+  .success-bottom{
+    transform: scale(.9);
+    margin-top: 3rem !important;
+  }
+  .success{
+    padding-top: 0rem !important;
+  }
+  .zixun-a{
+    height: 16rem !important;
+    width: 70% !important;
+  }
+  .contactimg{
+    transform: scale(.8);
   }
 }
 
@@ -460,20 +652,20 @@ li{
 }
 .developbg {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
 }
 .developitem {
   flex: 1;
-  height: 100vh;
+  height: 100%;
 }
 .iteminfo{
   width: 62%;
-  height: 50%;
-  margin: 0 auto;
-  margin-top: 80%;
+  height: 100%;
   color: #FFF;
+  margin: 0 auto;
   position: relative;
+  top: 20%;
 }
 .itemicon{
   height: 9rem;
@@ -512,14 +704,15 @@ li{
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  padding-top: 6%;
+  /* padding-top: 6%; */
 }
 .businesswrap {
-  width: 60%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex; 
   justify-content: space-between;
+  padding-top: 4%;
 }
 .businessitem1,
 .businessitem2 {
@@ -528,13 +721,12 @@ li{
 }
 .businessitem2 img {
   height: auto;
-  width: 100%;
-  float: left;
+  width: 65%;
+  margin-left: 20%;
 }
 .businessitem1 {
   box-sizing: border-box;
   padding: 5% 0;
-  padding-top: 10%;
 }
 .businessitem1 li {
   margin-top: 8%;
@@ -548,7 +740,10 @@ li{
   font-size: 1.6rem;
   color: #b41520;
   cursor: default;
-  margin-left: 20%;
+  margin-left: 40%;
+}
+.businessitem111 li {
+  margin-left: 3%;
 }
 .listtem1 li {
   float: left;
@@ -564,12 +759,14 @@ li{
         height: calc(100vh - 5.5rem);
         background: #ca3c46;
         margin: 0 auto;
+        padding-top: 4rem;
+        box-sizing: border-box;
     }
     .success-top{
         width: 42rem;
         height: 13rem;
         margin: 0 auto;
-        margin-top: 5.5rem;
+        /* margin-top: 5.5rem; */
         color: #fff;
         position: relative;
         padding-top: 2rem;
@@ -901,6 +1098,84 @@ li{
   height: 2rem;
   vertical-align: middle;
   margin-right: 1rem;
+}
+
+.zixun-1{
+  width: 84%;
+  height: 19rem;
+  background: #dd434c;
+  margin: 0 auto;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  padding-top: 1.5%;
+  padding-left: 1.5%;
+  display: block;
+}
+.zixun-1-1, .zixun-a-1{
+  width: 98%;
+  height: 92%;
+  display: flex;
+  justify-content: space-between;
+}
+.zixun-111{
+  width: 32%;
+  height: 100%;
+  background: #c92630;
+  padding: .6rem !important;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.zixun-aaa{
+  width: 48%;
+  height: 100%;
+  background: #c92630;
+  padding: .6rem !important;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.zixun-111-1, .zixun-aaa-1{
+  width: 44%;
+  height: 100%;
+  background: #fff;
+}
+.zixun-111-1 img, .zixun-aaa-1 img{
+  width: 100%;
+  height: 100%;
+}
+
+.zixun-111-2, .zixun-aaa-2{
+  width: 56%;
+  height: 100%;
+  color: #fff;
+}
+.zixun-111-2-1, .zixun-aaa-2-1{
+  width: 100%;
+  height: 2.5rem;
+  line-height: 3rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.zixun-111-2-2, .zixun-aaa-2-2{
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  line-height: 1.5rem;
+  font-size: 14px;
+  padding-top: 1rem;
+}
+.zixun-a{
+  width: 60%;
+  height: 18rem;
+  background: #dd434c;
+  margin: 0 auto;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  padding-top: 1.5%;
+  padding-left: 1.5%;
+  display: none;
 }
 
 </style>
